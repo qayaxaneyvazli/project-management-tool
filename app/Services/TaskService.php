@@ -19,8 +19,15 @@ class TaskService
 
     public function getTaskById($id)
     {
-        return $this->taskRepository->find($id);
+        $task = $this->taskRepository->find($id);
+
+        if (!$task) {
+            return null;
+        }
+
+        return $task;
     }
+
 
     public function createTask(array $data)
     {
@@ -42,5 +49,12 @@ class TaskService
         $task = $this->taskRepository->find($id);
         $task->status = $status;
         return $this->taskRepository->update($id, $task->toArray());
+    }
+
+
+
+    public function getProjectTasks($projectId)
+    {
+        return $this->taskRepository->getByProjectId($projectId);
     }
 }

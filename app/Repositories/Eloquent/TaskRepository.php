@@ -44,4 +44,9 @@ class TaskRepository implements TaskRepositoryInterface
     {
         return $this->model->where('project_id', $projectId)->get();
     }
+
+    public function getTasksByStatus($status)
+    {
+        return $this->model->where('status', $status)->get();
+    }
 }

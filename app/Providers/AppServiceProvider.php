@@ -26,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
             TaskRepositoryInterface::class,
             TaskRepository::class
         );
+
+        $this->app->bind(TaskService::class, function ($app) {
+            return new TaskService($app->make(TaskRepositoryInterface::class));
+        });
     }
 
     /**

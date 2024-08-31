@@ -32,7 +32,7 @@ This Project Management Tool is a web-based application designed to help teams o
 
 - Backend: PHP 8.1 with Laravel 9 framework
 - Frontend: HTML, CSS, JavaScript (with Laravel Mix for asset compilation)
-- Node.js and npm for frontend dependency management and build processes
+- Node.js and npm for frontend dependency management and build  processes.This  project requires Node.js version 20 or higher. Please make sure you have a compatible version of Node.js installed before attempting to run the application.
 - Database: MySQL 5.7
 - Caching: Redis
 - WebSockets: Laravel Echo and Pusher
